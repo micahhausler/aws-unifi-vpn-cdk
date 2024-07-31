@@ -1,0 +1,7 @@
+Content-Type: text/plain; charset="utf-8"
+
+sudo amazon-linux-extras install nginx1 -y
+sudo systemctl daemon-reload
+sudo systemctl enable nginx
+sudo systemctl start nginx
+--==BOUNDARY==

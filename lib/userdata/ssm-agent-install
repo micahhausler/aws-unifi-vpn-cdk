@@ -1,0 +1,12 @@
+Content-Type: text/plain; charset="utf-8"
+
+#!/bin/bash -xe
+if [ $(grep "^NAME=" /etc/os-release ) == 'NAME="Ubuntu"' ] ; then
+    echo Ubuntu;
+else
+    yum install -y amazon-ssm-agent
+    systemctl enable amazon-ssm-agent.service
+    systemctl start amazon-ssm-agent.service
+
+fi
+--==BOUNDARY==
